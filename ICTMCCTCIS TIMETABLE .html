@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School of Computing Timetable - Semester 1, 2025/2026</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .timetable-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .program-table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: #fff;
+        }
+        .program-table th, .program-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        .program-table th {
+            background-color: #4CAF50;
+            color: white;
+            text-transform: uppercase;
+        }
+        .program-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .program-table .break {
+            background-color: #e0f7fa;
+            color: #00796b;
+            font-weight: bold;
+        }
+        .common {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+        .ictm {
+            background-color: #b2dfdb;
+        }
+        .cis {
+            background-color: #c5e1a5;
+        }
+        .cct {
+            background-color: #ffccbc;
+        }
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .timetable-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .program-table {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Semester 1, 2025/2026 - School Timetable</h1>
+
+    <div class="timetable-container">
+        
+        <div>
+            <h2>ICTM Program</h2>
+            <table class="program-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>7:00 - 8:00</td>
+                        <td class="ictm">CIM 217</td>
+                        <td class="ictm">CIM 207</td>
+                        <td class="common">CIR 205</td>
+                        <td></td>
+                        <td class="common">CIT 211</td>
+                    </tr>
+                    <tr>
+                        <td>8:00 - 9:00</td>
+                        <td class="ictm">CIM 217</td>
+                        <td class="ictm">CIM 207</td>
+                        <td class="common">CIR 205</td>
+                        <td class="common">CIR 209</td>
+                        <td class="common">CIT 211</td>
+                    </tr>
+                    <tr>
+                        <td>9:00 - 10:00</td>
+                        <td class="ictm">CIR 209</td>
+                        <td class="common">CIT 211</td>
+                        <td class="common">CIM 207</td>
+                        <td class="common">CIR 209</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 11:00</td>
+                        <td class="break"></td>
+                        <td class="break"></td>
+                        <td></td>
+                        <td class="common">CIT 211</td>
+                        <td class="break"></td>
+                    </tr>
+                    <tr>
+                        <td>11:00 - 12:00</td>
+                        <td class="common">CIR 205</td>
+                        <td class="common">CIM 207</td>
+                        <td class="break"></td>
+                        <td class="ictm">CIM 217</td>
+                        <td class="ictm">CIM 207</td>
+                    </tr>
+                    <tr>
+                        <td>12:00 - 13:00</td>
+                        <td class="common">CIR 205</td>
+                        <td class="common">CIM 207</td>
+                        <td class="common">CIR 209</td>
+                        <td class="ictm">CIM 217</td>
+                        <td class="ictm">CIM 207</td>
+                    </tr>
+                    <tr>
+                        <td>13:00 - 14:00</td>
+                        <td class="common">CIT 211</td>
+                        <td class="ictm">CIM 217</td>
+                        <td class="common">CIR 205</td>
+                        <td class="ictm">CIR 209</td>
+                        <td class="break"></td>
+                    </tr>
+                    <tr>
+                        <td>14:00 - 15:00</td>
+                        <td class="break"></td>
+                        <td class="break"></td>
+                        <td class="common">CIR 205</td>
+                        <td class="break"></td>
+                        <td class="common">CIR 205</td>
+                    </tr>
+                    <tr>
+                        <td>15:00 - 16:00</td>
+                        <td class="ictm">CIM 217</td>
+                        <td class="ictm">CIM 207</td>
+                        <td class="ictm">CIR 209</td>
+                        <td class="common">CIT 211</td>
+                        <td class="common">CIR 205</td>
+                    </tr>
+                    <tr>
+                        <td>16:00 - 17:00</td>
+                        <td class="common">CIM 207</td>
+                        <td></td>
+                        <td class="common">CIR 205</td>
+                        <td class="ictm">CIM 217</td>
+                        <td class="common">CIR 209</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <h2>CIS Program</h2>
+            <table class="program-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>7:00 - 8:00</td>
+                        <td></td>
+                        <td class="cis">CIR 201</td>
+                        <td class="common">CIR 205</td>
+                        <td></td>
+                        <td class="common">CIT 211</td>
+                    </tr>
+                    <tr>
+                        <td>8:00 - 9:00</td>
+                        <td class="cis">CIS 210</td>
+                        <td class="cis">CIR 201</td>
+                        <td class="common">CIR 205</td>
+                        <td></td>
+                        <td class="common">CIT 211</td>
+                    </tr>
+                    <tr>
+                        <td>9:00 - 10:00</td>
+                        <td class="cis">CIR 203</td>
+                        <td class="common">CIT 211</td>
+                        <td></td>
+                        <td class="cis">CIS 210</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 11:00</td>
+                        <td class="break"></td>
+                        <td class="break"></td>
+                        <td class="cis">CIR 201</td>
+                        <td class="common">CIT 211</td>
+                        <td class="break"></td>
+                    </tr>
+                    <tr>
+                        <td>11:00 - 12:00</td>
+                        <td class="common">CIR 205</td>
+                        <td class="common">CIR 203</td>
+                        <td class="break"></td>
+                        <td class="cis">CIR 201</td>
+                        <td class="cis">CIS 210</td>
+                    </tr>
+                    <tr>
+                        <td>12:00 - 13:00</td>
+                        <td class="common">CIR 205</td>
+                        <td class="common">CIR 203</td>
+                        <td class="common">CIT 211</td>
+                        <td class="common">CIR 205</td>
+                        <td class="cis">CIS 210</td>
+                    </tr>
+                    <tr>
+                        <td>13:00 - 14:00</td>
+                        <td class="common">CIT 211</td>
+                        <td class="cis">CIS 210</td>
+                        <td class="common">CIR 205</td>
+                        <td class="cis">CIR 203</td>
+                        <td class="break"></td>
+                    </tr>
+                    <tr>
+                        <td>14:00 - 15:00</td>
+                        <td class="break"></td>
+                        <td class="break"></td>
+                        <td class="common">CIR 205</td>
+                        <td class="break"></td>
+                        <td class="common">CIR 205</td>
+                    </tr>
+                    <tr>
+                        <td>15:00 - 16:00</td>
+                        <td class="common">CIR 203</td>
+                        <td class="cis">CIR 201</td>
+                        <td></td>
+                        <td class="common">CIT 211</td>
+                        <td class="common">CIR 205</td>
+                    </tr>
+                    <tr>
+                        <td>16:00 - 17:00</td>
+                        <td class="cis">CIS 210</td>
+                        <td></td>
+                        <td class="common">CIR 205</td>
+                        <td class="common">CIR 203</td>
+                        <td class="cis">CIR 201</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div>
+            <h2>CCT Program</h2>
+            <table class="program-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>7:00 - 8:00</td>
+                        <td class="common">CIM 207</td>
+                        <td></td>
+                        <td class="common">CIR 205</td>
+                        <td class="common">CIR 203</td>
+                        <td class="common">CIT 211</td>
+                    </tr>
+                    <tr>
+                        <td>8:00 - 9:00</td>
+                        <td class="common">CIM 207</td>
+                        <td class="common">CIR 203</td>
+                        <td class="common">CIR 205</td>
+                        <td class="common">CIR 203</td>
+                        <td class="common">CIT 211</td>
+                    </tr>
+                    <tr>
+                        <td>9:00 - 10:00</td>
+                        <td class="cct">CCT 223</td>
+                        <td class="common">CIT 211</td>
+                        <td class="common">CIM 207</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 11:00</td>
+                        <td class="break"></td>
+                        <td class="break"></td>
+                        <td class="common">CIR 203</td>
+                        <td class="common">CIT 211</td>
+                        <td class="break"></td>
+                    </tr>
+                    <tr>
+                        <td>11:00 - 12:00</td>
+                        <td class="common">CIR 205</td>
+                        <td class="common">CIM 207</td>
+                        <td class="break"></td>
+                        <td class="cct">CCT 223</td>
+                        <td class="common">CIR 203</td>
+                    </tr>
+                    <tr>
+                        <td>12:00 - 13:00</td>
+                        <td class="common">CIR 205</td>
+                        <td class="common">CIM 207</td>
+                        <td class="common">CIT 211</td>
+                        <td class="cct">CCT 223</td>
+                        <td class="common">CIR 203</td>
+                    </tr>
+                    <tr>
+                        <td>13:00 - 14:00</td>
+                        <td class="common">CIT 211</td>
+                        <td class="common">CIM 207</td>
+                        <td class="common">CIR 205</td>
+                        <td class="common">CIM 207</td>
+                        <td class="break"></td>
+                    </tr>
+                    <tr>
+                        <td>14:00 - 15:00</td>
+                        <td class="break"></td>
+                        <td class="break"></td>
+                        <td class="common">CIR 205</td>
+                        <td class="break"></td>
+                        <td class="common">CIR 205</td>
+                    </tr>
+                    <tr>
+                        <td>15:00 - 16:00</td>
+                        <td class="common">CIM 207</td>
+                        <td></td>
+                        <td class="cct">CCT 223</td>
+                        <td class="common">CIT 211</td>
+                        <td class="common">CIR 205</td>
+                    </tr>
+                    <tr>
+                        <td>16:00 - 17:00</td>
+                        <td class="cct">CCT 223</td>
+                        <td class="common">CIR 205</td>
+                        <td class="common">CIR 205</td>
+                        <td class="common">CIM 207</td>
+                        <td class="cct">CCT 223</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
