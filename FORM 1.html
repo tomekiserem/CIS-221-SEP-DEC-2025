@@ -1,0 +1,163 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Registration Form</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 2em;
+        }
+        form {
+            
+        }
+        div {
+            margin-bottom: 1em;
+        }
+        label {
+            display: block;
+            margin-bottom: .5em;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: .5em;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: .3em;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: .5em;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 1em;
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 .5em;
+        }
+        .gender-options label {
+            display: inline-block;
+            margin-right: 1em;
+        }
+        .buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1em;
+        }
+        .buttons button {
+            padding: .7em 1.5em;
+            border: none;
+            border-radius: .3em;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .buttons button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .buttons button[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/submit-registration-data" method="post">
+        <h2>User Registration</h2>
+
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+        </div>
+
+        <div>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+
+        <fieldset>
+            <legend>Gender</legend>
+            <div class="gender-options">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+        </fieldset>
+
+        <div>
+            <label for="profile-pic">Upload Profile Picture:</label>
+            <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+        </div>
+        
+        <div>
+            <label for="bio">Tell Us About Yourself:</label>
+            <textarea id="bio" name="bio" rows="5"></textarea>
+        </div>
+
+        <div>
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="">--Please select--</option>
+                <option value="usa">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="ca">Canada</option>
+                <option value="au">Australia</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <fieldset>
+            <legend>Interests</legend>
+            <div>
+                <input type="checkbox" id="sports" name="interests" value="sports">
+                <label for="sports">Sports</label>
+                <input type="checkbox" id="music" name="interests" value="music">
+                <label for="music">Music</label>
+                <input type="checkbox" id="tech" name="interests" value="tech">
+                <label for="tech">Technology</label>
+            </div>
+        </fieldset>
+        
+        <div>
+            <label for="preferred-color">Preferred Color:</label>
+            <input type="color" id="preferred-color" name="preferred-color">
+        </div>
+        
+        <div>
+            <label for="satisfaction">Satisfaction Level (1-10):</label>
+            <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" value="5">
+        </div>
+
+        <div class="buttons">
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+        </div>
+        
+    </form>
+
+</body>
+</html>
+
