@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Fashion Store Inventory</title>
+    <style>
+        body { font-family: Arial; margin: 40px; background: #f8f8f8; }
+        table { width: 80%; border-collapse: collapse; margin: auto; background: white; box-shadow: 0px 2px 8px #aaa; }
+        th, td { padding: 12px; text-align: center; border: 1px solid #ddd; }
+        th { background: #333; color: white; }
+        h2 { text-align: center; }
+    </style>
+</head>
+<body>
+    <h2>📊 Fashion Store Inventory & Sales</h2>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Price ($)</th>
+            <th>Total Stock</th>
+            <th>Sold</th>
+            <th>Remaining</th>
+            <th>Revenue ($)</th>
+        </tr>
+        <?php while($row = $result->fetch_assoc()) { 
+            $remaining = $row['total_stock'] - $row['sold'];
+            $revenue = $row['price'] * $row['sold'];
+            $total_revenue += $revenue;
+        ?>
+        <tr>
+            <td><?php echo $row['item_name']; ?></td>
+            <td><?php echo number_format($row['price'], 2); ?></td>
+            <td><?php echo $row['total_stock']; ?></td>
+            <td><?php echo $row['sold']; ?></td>
+            <td><?php echo $remaining; ?></td>
+            <td><?php echo number_format($revenue, 2); ?></td>
+        </tr>
+        <?php } ?>
+        <tr style="font-weight: bold; background: #eee;">
+            <td colspan="5">💰 Total Store Revenue</td>
+            <td><?php echo number_format($total_revenue, 2); ?></td>
+        </tr>
+    </table>
+</body>
+</html>
